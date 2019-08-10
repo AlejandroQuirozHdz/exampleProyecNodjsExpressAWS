@@ -1,0 +1,399 @@
+
+{
+	"info": {
+		"_postman_id": "9106bc22-b159-4425-b2ea-c3406f81bf65",
+		"name": "ExampleKavak",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user\":\"alex12\",\n\t\"password\":\"snoopy_72_91\"\n}"
+				},
+				"url": {
+					"raw": "https://api-service-kavak-example.herokuapp.com/api/services/login/",
+					"protocol": "https",
+					"host": [
+						"api-service-kavak-example",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"services",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUserService",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nombre\":\"Alejandro\",\n\t\"ap_pat\":\"Quiroz\",\n\t\"ap_mat\":\"Hernandez\",\n\t\"edad\":23,\n\t\"fecha_nacimiento\":\"21-05-1996\",\n\t\"telefono\":\"5516126282\",\n\t\"user\":\"alex12\",\n\t\"password\":\"snoopy_72_91\"\n}"
+				},
+				"url": {
+					"raw": "https://api-service-kavak-example.herokuapp.com/api/services/newUser/",
+					"protocol": "https",
+					"host": [
+						"api-service-kavak-example",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"services",
+						"newUser",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTask",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsInVzZXIiOiJhbGV4MTIiLCJpYXQiOjE1NjI1NTg3MjMsImV4cCI6MTU2MjY0NTEyM30.TgneQqXe0hkGn6jEUhJKwbds4SE0-kD2mm93msstIzk",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nombre\":\"proyecto kavak\",\n\t\"status\":true\n}"
+				},
+				"url": {
+					"raw": "https://api-service-kavak-example.herokuapp.com/api/services/task/",
+					"protocol": "https",
+					"host": [
+						"api-service-kavak-example",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"services",
+						"task",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTasks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsInVzZXIiOiJhbGV4MTIiLCJpYXQiOjE1NjI1NTg3MjMsImV4cCI6MTU2MjY0NTEyM30.TgneQqXe0hkGn6jEUhJKwbds4SE0-kD2mm93msstIzk"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://api-service-kavak-example.herokuapp.com/api/services/task/",
+					"protocol": "https",
+					"host": [
+						"api-service-kavak-example",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"services",
+						"task",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTask",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsInVzZXIiOiJhbGV4MTIiLCJpYXQiOjE1NjI1NTg3MjMsImV4cCI6MTU2MjY0NTEyM30.TgneQqXe0hkGn6jEUhJKwbds4SE0-kD2mm93msstIzk"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://api-service-kavak-example.herokuapp.com/api/services/task/3",
+					"protocol": "https",
+					"host": [
+						"api-service-kavak-example",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"services",
+						"task",
+						"3"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTask",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsInVzZXIiOiJhbGV4MTIiLCJpYXQiOjE1NjI1NTg3MjMsImV4cCI6MTU2MjY0NTEyM30.TgneQqXe0hkGn6jEUhJKwbds4SE0-kD2mm93msstIzk"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nombre\":\"proyecto example\",\n\t\"status\":true\n}"
+				},
+				"url": {
+					"raw": "https://api-service-kavak-example.herokuapp.com/api/services/task/2",
+					"protocol": "https",
+					"host": [
+						"api-service-kavak-example",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"services",
+						"task",
+						"2"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTask",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsInVzZXIiOiJhbGV4MTIiLCJpYXQiOjE1NjI1NTg3MjMsImV4cCI6MTU2MjY0NTEyM30.TgneQqXe0hkGn6jEUhJKwbds4SE0-kD2mm93msstIzk"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://api-service-kavak-example.herokuapp.com/api/services/task/2",
+					"protocol": "https",
+					"host": [
+						"api-service-kavak-example",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"services",
+						"task",
+						"2"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchTask",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsInVzZXIiOiJhbGV4MTIiLCJpYXQiOjE1NjI1NTg3MjMsImV4cCI6MTU2MjY0NTEyM30.TgneQqXe0hkGn6jEUhJKwbds4SE0-kD2mm93msstIzk",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id_task\":3,\n\t\"nombre\":\"proyecto kavak\",\n\t\"status\":true,\n\t\"date_create\":\"07-07-2019\",\n\t\"id_user\":16\n}"
+				},
+				"url": {
+					"raw": "https://api-service-kavak-example.herokuapp.com/api/services/taskSearch/",
+					"protocol": "https",
+					"host": [
+						"api-service-kavak-example",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"services",
+						"taskSearch",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "indexMatrizSearch",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwidXNlciI6ImFsZXgxIiwiaWF0IjoxNTYyNTE0MDQzLCJleHAiOjE1NjI2MDA0NDN9.PRjUQHYCbzHZiY-8OZWefyQ1MJuKSGnXCZlj5IKVVXw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"matriz\":[2,3,5,7],\n\t\"valorSearch\":1\n}"
+				},
+				"url": {
+					"raw": "https://api-service-kavak-example.herokuapp.com/api/services/indexMatriz/",
+					"protocol": "https",
+					"host": [
+						"api-service-kavak-example",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"services",
+						"indexMatriz",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
